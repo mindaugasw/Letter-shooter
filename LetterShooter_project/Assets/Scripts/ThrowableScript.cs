@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ThrowableScript : MonoBehaviour {
 
-	// Use this for initialization
-	/*void Start () {
-		Invoke("DestroyThis", 1);
+	void Start()
+	{
+		Invoke("DestroyThis", 20);
 	}
-	
-	void DestroyThis () {
-		Destroy(this);
-	}*/
+
+	void DestroyThis()
+	{
+		Destroy(gameObject);
+	}
 }

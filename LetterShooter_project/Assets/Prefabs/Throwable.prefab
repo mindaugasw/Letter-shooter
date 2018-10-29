@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 212932084054640934}
   - component: {fileID: 50904876705935892}
   - component: {fileID: 114534063344125120}
-  - component: {fileID: 5078732665407158227}
+  - component: {fileID: 3900534631719974099}
   m_Layer: 0
   m_Name: Throwable
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1034382099798878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8d4822091e9fe40899f8127cc6ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &5078732665407158227
+--- !u!60 &3900534631719974099
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

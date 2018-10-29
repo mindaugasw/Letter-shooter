@@ -155,10 +155,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de55dfa8082add4984824f8efd06d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 510138720}
   ThrowablePrefab: {fileID: 1034382099798878, guid: e603205c0a981bf4193ca55ddaed139f,
     type: 3}
   spawnParent: {fileID: 399248791}
   force: 10
+  LettersTop:
+  - {fileID: 2605769144860351736, guid: 5258a9d287faec14cb6841d0ce673cf4, type: 3}
+  - {fileID: 8346079634525607823, guid: 34377be19df691c4b956cae7c13f8255, type: 3}
+  - {fileID: 723313397499795815, guid: b48829bc8d8fcda4f8694ec438c6763d, type: 3}
+  - {fileID: 6620102815223796297, guid: ee409fdbde47e5f43abfd174c144917d, type: 3}
+  - {fileID: 5234473947292527725, guid: 0a0c2db871ed44140bde9def656ed943, type: 3}
+  - {fileID: 0}
+  LettersMiddle: []
+  LettersBottom: []
   letter_c: {fileID: 21300004, guid: 13d8c211e74ee63499eb9954c685b9bf, type: 3}
 --- !u!1 &510138716
 GameObject:
@@ -203,7 +213,7 @@ Behaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510138716}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &510138720
 Camera:
   m_ObjectHideFlags: 0
@@ -230,7 +240,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
