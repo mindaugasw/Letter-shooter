@@ -56,7 +56,11 @@ public class MainScript : MonoBehaviour {
 				new Key(KeyCode.E, LettersTop[2]),
 				new Key(KeyCode.R, LettersTop[3]),
 				new Key(KeyCode.T, LettersTop[4]),
-				new Key(KeyCode.Y, LettersTop[5])
+				new Key(KeyCode.Y, LettersTop[5]),
+				new Key(KeyCode.U, LettersTop[6]),
+				new Key(KeyCode.I, LettersTop[7]),
+				new Key(KeyCode.O, LettersTop[8]),
+				new Key(KeyCode.P, LettersTop[9])
 			},
 			new Key[] // Middle keys row
 			{
@@ -82,8 +86,8 @@ public class MainScript : MonoBehaviour {
 		viewport = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)) * 2;
 		floor.localScale = new Vector3(viewport.x * arenaWidth, 1, 1);
 		floor.position = new Vector3(0, -viewport.y / 2);
-		gameArea.transform.localScale = new Vector3(viewport.x * arenaWidth, viewport.y * 2);
-		gameArea.transform.Translate(0, viewport.y / 2, 0);
+		gameArea.transform.localScale = new Vector3(viewport.x * arenaWidth, viewport.y * 4);
+		gameArea.transform.Translate(0, viewport.y * 1.5f, 0);
 	}
 
 	void Update()
@@ -143,6 +147,13 @@ public class MainScript : MonoBehaviour {
 		/*Vector2 newDirection = Random.insideUnitCircle;
 		newDirection.y = Mathf.Abs(newDirection.y);
 		newLetter.GetComponent<Rigidbody2D>().velocity = newDirection * force;*/
+	}
+
+	public void clearAll()
+	{
+		int n = spawnParent.childCount;
+		for (int i = 0; i < n; i++)
+			Destroy(spawnParent.GetChild(i).gameObject);
 	}
 
 	IEnumerator forceControl()
