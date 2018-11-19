@@ -17,12 +17,24 @@ public class RandomSpinAnimation : MonoBehaviour
 	float newScale;
 
 	// Spin
-	public float spinSpeed = -1f;
-	
-    void Start()
+	//public float spinSpeed = -1f;
+
+	float minSpinSpeed = 2f;
+	float maxSpinSpeed = 25f;
+
+	float minForce;
+	float maxForce;
+
+	//public float currentForce;
+	//public float currentSpeed;
+
+	void Start()
     {
 		t = transform;
-    }
+
+		minForce = MainScript.Instance.forceCurve.Evaluate(-10f);
+		maxForce = MainScript.Instance.forceCurve.Evaluate(1000f);
+	}
 
     
     void Update()
@@ -47,6 +59,13 @@ public class RandomSpinAnimation : MonoBehaviour
 		t.localScale = new Vector3(newScale, newScale, 0);
 
 		// Spin
-		t.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
+
+		//currentForce = MainScript.Instance.forceCurrent;
+		float currentSpeed = Mathf.Lerp(
+				minSpinSpeed,
+				maxSpinSpeed,
+				(MainScript.Instance.forceCurrent - minForce) / (maxForce - minForce));
+		//t.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
+		t.Rotate(Vector3.forward, -currentSpeed * Time.deltaTime);
 	}
 }

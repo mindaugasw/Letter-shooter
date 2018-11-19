@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrowableObject : MonoBehaviour {
 
-	Collider2D collider;
+	new Collider2D collider;
 	float timer = 1f;
 
 	void Start()
@@ -15,7 +15,7 @@ public class ThrowableObject : MonoBehaviour {
 
 	void DestroyThis()
 	{
-		if (collider.IsTouching(MainScript.instance.gameArea))
+		if (collider.IsTouching(MainScript.Instance.gameArea))
 		{
 			Invoke("DestroyThis", timer);
 		}
@@ -28,7 +28,7 @@ public class ThrowableObject : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
-		Invoke("DestroyThis", 2);
+		Invoke("DestroyThis", 5);
 		//DestroyThis();
 	}
 }

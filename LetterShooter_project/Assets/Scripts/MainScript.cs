@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainScript : MonoBehaviour {
 
 	// --- References to other objects ---
-	public static MainScript instance;
+	public static MainScript Instance;
 	public Camera mainCamera;
 	public Transform floor;
 	public Collider2D gameArea;
@@ -42,8 +42,8 @@ public class MainScript : MonoBehaviour {
 	
 	void Start ()
 	{
-		if (instance == null)
-			instance = this;
+		if (Instance == null)
+			Instance = this;
 		else
 			Destroy(gameObject);
 
@@ -60,19 +60,29 @@ public class MainScript : MonoBehaviour {
 				new Key(KeyCode.U, LettersTop[6]),
 				new Key(KeyCode.I, LettersTop[7]),
 				new Key(KeyCode.O, LettersTop[8]),
-				new Key(KeyCode.P, LettersTop[9])
+				new Key(KeyCode.P, LettersTop[9]),
 			},
 			new Key[] // Middle keys row
 			{
 				new Key(KeyCode.A, LettersMiddle[0]),
 				new Key(KeyCode.S, LettersMiddle[1]),
 				new Key(KeyCode.D, LettersMiddle[2]),
+				new Key(KeyCode.F, LettersMiddle[3]),
+				new Key(KeyCode.G, LettersMiddle[4]),
+				new Key(KeyCode.H, LettersMiddle[5]),
+				new Key(KeyCode.J, LettersMiddle[6]),
+				new Key(KeyCode.K, LettersMiddle[7]),
+				new Key(KeyCode.L, LettersMiddle[8]),
 			},
 			new Key[] // Bottom keys row
 			{
 				new Key(KeyCode.Z, LettersBottom[0]),
 				new Key(KeyCode.X, LettersBottom[1]),
 				new Key(KeyCode.C, LettersBottom[2]),
+				new Key(KeyCode.V, LettersBottom[3]),
+				new Key(KeyCode.B, LettersBottom[4]),
+				new Key(KeyCode.N, LettersBottom[5]),
+				new Key(KeyCode.M, LettersBottom[6]),
 			}
 		};
 
