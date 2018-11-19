@@ -102,6 +102,9 @@ public class MainScript : MonoBehaviour {
 
 	void Update()
 	{
+		if (Input.GetKey(KeyCode.Escape))
+			Application.Quit();
+
 		for (int row = 0; row < keyboard.Length; row++)
 		{
 			for (int key = 0; key < keyboard[row].Length; key++)
